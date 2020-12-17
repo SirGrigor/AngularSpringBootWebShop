@@ -8,11 +8,16 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Data
 @Service
+@Data
 public class ProductService {
+
     @Autowired
     private final ProductRepository productRepository;
+
+    public List<Product> getAllProducts() {
+        return productRepository.findAll();
+    }
 
     public void saveProduct(Product product) {
         productRepository.save(product);
@@ -22,11 +27,8 @@ public class ProductService {
         productRepository.delete(product);
     }
 
-    public List<Product> getAllProducts() {
-        return productRepository.findAll();
-    }
-
     public Product getProduct(Long id) {
         return productRepository.getOne(id);
     }
+
 }

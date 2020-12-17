@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Product view</title>
+</head>
+<body>
+<tr>
+    <td th:text="${product.name}"></td>
+    <td th:text="${product.description}"></td>
+    <td th:text="${product.price}"></td>
+    <td th:text="${product.id}"></td>
+    <td th:text="${product.isActive}"></td>
+    <td th:src="${product.imageSrc}"></td>
+</tr>
+</body>
+</html>
