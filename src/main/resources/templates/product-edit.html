@@ -1,17 +1,20 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Add product</title>
+    <title>Edit product</title>
 </head>
 <body>
 <a href="/home">Mine tagasi avalehele</a>
 <form action="/product/editsave" method="post">
+    <div th:text="${product.id}"></div>
+    <input hidden type="number" id="id" name="id" value="${product.id}"><br>
     <label for="name">Name:</label><br>
     <input type="text" id="name" name="name" placeholder="Insert name"><br>
     <label for="description">Description:</label><br>
     <input type="text" id="description" name="description" placeholder="Insert description"><br>
-    <label for="price">Price:</label><br>
+    <label for="price">Description:</label><br>
     <input type="number" id="price" name="price" placeholder="Insert price"><br>
     <br>
     <input type="submit" value="Submit">

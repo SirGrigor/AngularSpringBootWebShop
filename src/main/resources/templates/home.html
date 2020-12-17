@@ -15,6 +15,7 @@
             <td th:text="${product.id}"></td>
             <td><a th:href="'/product/' + ${product.id}">Vaata toodet</a></td>
             <td><a th:href="'/delete/' + ${product.id}">Kustuta</a></td>
+            <td><a th:href="'/product/edit/' + ${product.id}">Muuda</a></td>
 
         </tr>
     </th:block>

@@ -51,7 +51,8 @@ public class ProductController {
         return "product-view";
     }
     @RequestMapping(value = "/product/editsave", method = RequestMethod.POST)
-    public String saveEditProduct(@ModelAttribute("product") Product product){
+    public String saveEditProduct(@ModelAttribute("product") Product product) {
+        productService.saveProduct(product);
         return "redirect:/product/" + product.getId();
     }
 }
